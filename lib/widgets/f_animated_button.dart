@@ -70,7 +70,11 @@ class _fAnimatedButtonState extends State<fAnimatedButton> {
   @override
   Widget build(BuildContext context) {
     return Listener(
-      onPointerUp: (event) => setState(() => isButtonDown = false),
+      onPointerUp: (event) async {
+        Future.delayed(const Duration(milliseconds: 100), () {
+          setState(() => isButtonDown = false);
+        });
+      },
       onPointerDown: (event) => setState(() => isButtonDown = true),
       child: GestureDetector(
         onTap: widget.onTap,
