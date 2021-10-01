@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_custom_widgets/widgets/f_animated_button.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -11,7 +12,32 @@ class HomeScreen extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(12.0),
           child: Column(
-            children: const [],
+            children: [
+              const SizedBox(height: 150.0),
+              fAnimatedButton(
+                title: 'PUSH IT',
+                animationDuration: const Duration(seconds: 0),
+                onTap: () {
+                  print('Button clicked');
+                },
+              ),
+              const SizedBox(height: 20.0),
+              fAnimatedButton(
+                title: 'PUSH IT',
+                animationDuration: const Duration(seconds: 1),
+                onTap: () {
+                  print('Button clicked');
+                },
+              ),
+              const SizedBox(height: 20.0),
+              fAnimatedButton(
+                title: 'PUSH IT',
+                animationDuration: const Duration(seconds: 5),
+                onTap: () {
+                  print('Button clicked');
+                },
+              ),
+            ],
           ),
         ),
       ),
