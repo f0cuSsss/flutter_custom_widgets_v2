@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_custom_widgets/widgets/f_scale_animation.dart';
 import 'package:flutter_custom_widgets/widgets/f_animated_button.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -37,6 +38,13 @@ class HomeScreen extends StatelessWidget {
                   print('Button clicked');
                 },
               ),
+              const SizedBox(height: 20.0),
+              const fScaleAnimated(child: FlutterLogo(size: 150.0)),
+              const SizedBox(height: 20.0),
+              const fScaleAnimated(
+                child: Text('Animated text', style: TextStyle(fontSize: 24)),
+              ),
+              const SizedBox(height: 20.0),
             ],
           ),
         ),
